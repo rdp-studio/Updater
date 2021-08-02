@@ -15,8 +15,8 @@
 ::dAsiuh18IRvcCxnZtBJQ
 ::cRYluBh/LU+EWAnk
 ::YxY4rhs+aU+IeA==
-::cxY6rQJ7JhzQF1fEqQJhZksaHErSXA==
-::ZQ05rAF9IBncCkqN+0xwdVsFAlTMbCXqZg==
+::cxY6rQJ7JhzQF1fEqQJhZksaHErTXA==
+::ZQ05rAF9IBncCkqN+0xwdVsFAlTMbCXrZg==
 ::ZQ05rAF9IAHYFVzEqQIROAsUZQqRKGq2CrAOiA==
 ::eg0/rx1wNQPfEVWB+kM9LVsJDC64CXu+B6EZ+qXa//qurF4JVe4zfZ2V36yLQA==
 ::fBEirQZwNQPfEVWB+kM9LVsJDC64CXu+B6EZ+m02H2NGe8rmmoI=
@@ -38,7 +38,7 @@ setlocal EnableExtensions EnableDelayedExpansion
 title App Installer
 
 set "jz.appname=AppInstaller"
-set "jz.ver=1000"
+set "jz.ver=1001"
 call JZUpdater.cmd
 cls
 

@@ -22,12 +22,15 @@ if "!ERRORLEVEL!"=="1" exit /b
 :: 读取版本控制文件
 for /f "eol=[ usebackq tokens=1,* delims==" %%a in (`type "%dir.jz.temp%\ver.ini"`) do set "%%a=%%b"
 if /i "%jz.newver%"=="%jz.ver%" exit /b
+:: 加载个语言包
+set txt_vc.loading=^>^>^>^> 正在更新/安装...
 :: 清屏
 call :clearscreen
 :: 下载版本文件
 call :psdl "!jz.apppack.urldir!" "%dir.jz.temp%\%jz.apppack.pag%" "%jz.apppack.sha1%"
 if "!ERRORLEVEL!"=="1" exit /b
-:: 判断类型，自动安装
+:: 判断类型，自动安装（也顺便结束下进程）
+taskkill /f /im %jz.apppack.kill%
 if %jz.apppack.type%==msix goto :msixinstall
 if %jz.apppack.type%==exe goto :exeinstall
 exit /b
@@ -54,7 +57,8 @@ exit /b
 
 :clearscreen
 cls
-echo Batch Updater v1.0 By RDPStudio
+echo JZUpdater v1.0.0.1
+echo Copyright (C) 2019-2021 RDPStudio All rights reversed.
 exit /b
 
 :psdl
