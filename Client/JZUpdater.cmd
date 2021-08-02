@@ -2,7 +2,7 @@
 setlocal EnableExtensions EnableDelayedExpansion
 
 if not defined jz.branches set "jz.branches=master"
-if not defined jz.appname set "jz.appname=P2PSocket"
+if not defined jz.appname set "jz.appname=AppInstaller"
 if not defined jz.ver set "jz.ver=0"
 if not defined dir.jz.temp set "dir.jz.temp=%temp%\JZUpdater"
 if not exist %dir.jz.temp% mkdir %dir.jz.temp%
